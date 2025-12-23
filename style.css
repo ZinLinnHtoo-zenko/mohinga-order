@@ -1,0 +1,211 @@
+@font-face {
+  font-family: MyanmarKhyay;
+  src: url("assets/MyanmarKhyay\(1\).ttf");
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --primary-color: #e32811;
+  --secondary-color: #ffe5d5;
+
+  /* Font sizes */
+  --fs-xxl: 9vw;
+  --fs-xl: 3rem;
+  --fs-lg: 2rem;
+  --fs-md: 1.5rem;
+  --fs-sm: 1.25rem;
+
+  /* Spacing */
+  --space--xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.25rem;
+  --space-xl: 2rem;
+}
+
+button {
+  font-family: "Smooch Sans", sans-serif;
+}
+
+body {
+  font-family: "Smooch Sans", sans-serif;
+  background-color: var(--secondary-color);
+}
+
+main {
+  padding: var(--space-lg) var(--space-xl);
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Heading */
+
+.heading {
+  font-size: var(--fs-xxl);
+  font-family: "MyanmarKhyay", sans-serif;
+}
+
+.description {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  margin-top: var(--space-sm);
+}
+
+.description span {
+  font-size: var(--fs-xl);
+}
+
+.heading,
+.description {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Hero Image */
+
+.hero-img-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-img {
+  display: block;
+  transform: scale(1.2);
+  transform-origin: bottom;
+}
+
+.mask {
+  position: absolute;
+  inset: 0;
+  clip-path: circle(61.6% at 49% 78%);
+}
+
+.order-btn {
+  position: absolute;
+  top: 10%;
+  right: 25%;
+  border: 0;
+  background-color: var(--primary-color);
+  color: white;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: var(--fs-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translate(50%, -50%);
+  transition: width 200ms ease-in-out, height 200ms ease-in-out, transform 150ms;
+}
+
+.order-btn-icon {
+  width: 1.75rem;
+  height: 0;
+  overflow: hidden;
+  transition: height 200ms ease-in-out;
+}
+
+.order-btn:hover,
+.order-btn.hovering {
+  width: 180px;
+  height: 180px;
+}
+
+.order-btn:hover .order-btn-icon,
+.order-btn.hovering .order-btn-icon {
+  height: 1.75rem;
+}
+
+/* footer */
+
+.footer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+/* review */
+
+.review-container {
+  width: 24rem;
+  position: relative;
+}
+
+.review-content {
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-sm);
+}
+
+.reviewer {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.review-star.faded {
+  opacity: 0.3;
+}
+
+.review-btns {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.review-btn {
+  background-color: transparent;
+  border: 0;
+  font-size: var(--fs-lg);
+  cursor: pointer;
+  padding: 0 var(--space-xs);
+  line-height: 70%;
+  opacity: 0.7;
+}
+
+/* Contact */
+
+.socials {
+  display: flex;
+  justify-content: end;
+  gap: var(--space-xxs);
+  margin-bottom: var(--space-xxs);
+}
+
+.socials a {
+  opacity: 0.7;
+}
+
+.socials a:hover {
+  opacity: 1;
+}
+
+.contact-link {
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: var(--fs-md);
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
